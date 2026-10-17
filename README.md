@@ -1,4 +1,4 @@
-# Empty
+# Suvavi
 
 A blank canvas — the minimal jac-shadcn starter the other templates are built on.
 
