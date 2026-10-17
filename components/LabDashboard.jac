@@ -48,7 +48,7 @@ def:pub LabDashboard() -> JsxElement {
                 {for (idx, item) in enumerate(queue) {
                     <article key={str(idx)} className="flex flex-col gap-3 rounded-xl border p-4">
                         <div className="flex flex-wrap items-center justify-between gap-2"><div><p className="font-semibold">{item["test"]}</p><p className="text-sm text-muted-foreground">{item["patient"]} · {item["place"]} · {item["when"]}</p></div><Badge variant="secondary">Awaiting result</Badge></div>
-                        <textarea value={(drafts[item["slot_key"] as str] if (item["slot_key"] as str) in drafts else "")} onChange={lambda e: any -> None { set_draft(item["slot_key"] as str, e.target.value); }} placeholder="Type the result or report text" className="min-h-24 w-full resize-y rounded-lg border border-input bg-background px-3 py-2.5 text-sm shadow-sm outline-none placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring" />
+                        <textarea value={(drafts[item["slot_key"] as str] if (item["slot_key"] as str) in drafts else "")} onChange={lambda (e: ChangeEvent) { set_draft(item["slot_key"] as str, e.target.value); }} placeholder="Type the result or report text" className="min-h-24 w-full resize-y rounded-lg border border-input bg-background px-3 py-2.5 text-sm shadow-sm outline-none placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring" />
                         <Button className="w-fit" onClick={lambda { handle_save(item["slot_key"] as str); }}>Save result</Button>
                     </article>
                 }}
