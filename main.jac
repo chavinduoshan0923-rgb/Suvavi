@@ -1,4 +1,4 @@
-import from services.carepathService { Appointment, PatientProfile, PatientDirectoryEntry, DoctorProfile, LabStaffProfile, LabResult, get_patient_dashboard, get_patient_profile, list_patient_appointments, list_patient_lab_results, list_doctors, verify_doctor_user, verify_lab_user, get_doctor_dashboard, get_lab_queue, save_lab_result, get_admin_overview, admin_add_doctor, admin_add_lab_staff, admin_cancel_appointment, get_triage_guidance, book_appointment, cancel_appointment, save_patient_intake }
+import from services.suvaviService { Appointment, PatientProfile, PatientDirectoryEntry, DoctorProfile, LabStaffProfile, LabResult, get_patient_dashboard, get_patient_profile, list_patient_appointments, list_patient_lab_results, list_doctors, verify_doctor_user, verify_lab_user, get_doctor_dashboard, get_lab_queue, save_lab_result, get_admin_overview, admin_add_doctor, admin_add_lab_staff, admin_cancel_appointment, get_triage_guidance, book_appointment, cancel_appointment, save_patient_intake }
 import from services.assistantService { chat_with_assistant }
 import from components.RoleSelection { RoleSelection }
 import from components.PatientSignup { PatientSignup }
